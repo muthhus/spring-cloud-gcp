@@ -19,6 +19,7 @@
 		<google-cloud-core.version>1.2.3</google-cloud-core.version>
 		<google-cloud-pubsub.version>0.20.1-beta</google-cloud-pubsub.version>
 		<google-cloud-storage.version>1.2.1</google-cloud-storage.version>
+		<spring-boot.version>1.5.4.RELEASE</spring-boot.version>
 	</properties>
 
 	<dependencyManagement>
@@ -44,6 +45,17 @@
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-gcp-stream-core</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-gcp-stream-binder</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
 				<groupId>com.google.cloud</groupId>
 				<artifactId>google-cloud-core</artifactId>
 				<version>${google-cloud-core.version}</version>
@@ -63,6 +75,12 @@
 				<groupId>commons-logging</groupId>
 				<artifactId>commons-logging</artifactId>
 				<version>1.2</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-stream</artifactId>
+				<version>1.2.1.RELEASE</version>
 			</dependency>
 
 			<!-- spring-cloud-gcp-starter-core -->
@@ -89,6 +107,13 @@
 				<groupId>com.google.cloud.sql</groupId>
 				<artifactId>mysql-socket-factory</artifactId>
 				<version>1.0.4</version>
+			</dependency>
+
+			<!-- Configuration properties metadata -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-configuration-processor</artifactId>
+				<version>${spring-boot.version}</version>
 			</dependency>
 
 			<!--Starters-->
